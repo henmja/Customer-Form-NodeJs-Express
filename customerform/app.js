@@ -67,7 +67,7 @@ app.get('/', function(req, res){
 //render index.ejs on post (save button) and add requested customer to mongodb...
 app.post('/', function(req, res){
 	req.checkBody('firstName', 'First Name missing').notEmpty();
-	req.checkBody('lastName', 'Last Name Name missing').notEmpty();
+	req.checkBody('lastName', 'Last Name missing').notEmpty();
 	req.checkBody('address', 'Address missing').notEmpty();
 	req.checkBody('phoneNumber', 'Phone Number missing').notEmpty();
 	req.checkBody('email', 'Email missing').notEmpty();
