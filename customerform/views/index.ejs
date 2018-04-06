@@ -1,0 +1,108 @@
+<html>
+	<head>
+		<title>CustomerForm</title>
+		<link href="css/bootstrap.css" rel="stylesheet" />
+		<script
+  src="http://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <script src="js/main.js">
+  </script>
+
+	</head>
+	<body>
+
+<table>
+	<tr>
+		<td>
+			<h1>Customer Form</h1>
+		</td>
+		<td>
+			<span style="display:inline-block; width: 50px;"></span>
+		</td>
+		<td>
+			<h1><%= title %></h1>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<form method="POST" action="/">
+				<table>
+					<tr>
+						<td>
+							<label style="color:white">First Name</label>
+						</td>
+						<td>
+							<input type="text" name="firstName">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label style="color:white">Last Name</label>
+						</td>
+						<td>
+							<input type="text" name="lastName">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label style="color:white">Address</label>
+						</td>
+						<td>
+							<input type="text" name="address">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label style="color:white">Phone Number</label>
+						</td>
+						<td>
+							<input type="text" name="phoneNumber">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label style="color:white">Email</label>
+						</td>
+						<td>
+							<input type="text" name="email">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="submit" value="Save">
+						</td>
+						<td>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</td>
+
+		<td><span style="display:inline-block; width: 50px;"></span></td>
+
+		<td>
+			<ul class="jumbotron" style="1px solid #888; box-shadow:0px 2px 5px #ccc;">
+				<% customers.forEach(function(user){ %>
+					<%= user.firstName %> <%= user.lastName %> <button type="button" class="deleteCustomer" data-id="<%=user._id%>" aria-label="Close">
+  					<span aria-hidden="true">&times;</span></button><br>
+  				<% }) %>
+			</ul>
+		</td>
+
+	</tr>
+</table>
+
+<%if(errors){ %>
+
+	<% errors.forEach(function(error){ %>
+		<%= error.msg %>
+		-
+	<% }) %>
+<% } %>
+
+</body>
+</html>
+		
+	
