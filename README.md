@@ -4,7 +4,7 @@ Customer Management Application created in NodeJs Express.
 
 Error Validation is implemented.
 
-I used Bootstrap for the design.
+Layout designed using Bootstrap.
 
 Customers are stored at a Mongodb database (db name: 'customerform', collection name: 'customers').
 
