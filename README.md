@@ -8,4 +8,4 @@ Error Validation is implemented.
 
 Customers are stored at a Mongodb database (db name: 'customerform', collection name: 'customers').
 
-![customerform](https://user-images.githubusercontent.com/10501925/38419195-c160436e-399f-11e8-97ea-c028326bde9a.jpg)
+![customerform](https://user-images.githubusercontent.com/10501925/38419529-1b9441a4-39a1-11e8-8610-71c18299dcad.jpg)
